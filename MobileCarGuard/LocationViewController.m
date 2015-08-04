@@ -48,10 +48,10 @@
     _mapView.mapType = BMKMapTypeStandard;
     
     CLLocationCoordinate2D coordinate;                  //设定经纬度
-    coordinate.latitude = 39.027283;         //纬度
-    coordinate.longitude = 110.313217;      //经度
+    coordinate.latitude = 26.107283;         //纬度
+    coordinate.longitude = 119.223217;      //经度
     
-    BMKCoordinateRegion viewRegion = BMKCoordinateRegionMake(coordinate, BMKCoordinateSpanMake(1.0, 1.0));
+    BMKCoordinateRegion viewRegion = BMKCoordinateRegionMake(coordinate, BMKCoordinateSpanMake(0.3, 0.3));
     BMKCoordinateRegion adjustedRegion = [_mapView regionThatFits:viewRegion];
     
     [_mapView setRegion:adjustedRegion animated:YES];
