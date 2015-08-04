@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>8501</key>
+	<string>闽A00001</string>
+	<key>8502</key>
+	<string>闽A00002</string>
+	<key>8503</key>
+	<string>闽A00003</string>
+	<key>8504</key>
+	<string>闽B00001</string>
+	<key>8505</key>
+	<string>闽C00001</string>
+	<key>8506</key>
+	<string>闽D00009</string>
+	<key>8507</key>
+	<string>闽E00005</string>
+</dict>
+</plist>
