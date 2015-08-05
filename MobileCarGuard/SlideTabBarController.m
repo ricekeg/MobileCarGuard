@@ -6,6 +6,9 @@
 //  Copyright (c) 2015年 郑旭. All rights reserved.
 //
 
+
+#define CURRENT_SYSTEM_COLOR [UIColor colorWithRed:52.0/255.0 green:170.0/255.0 blue:220.0/255.0 alpha:1.0]
+
 #import "SlideTabBarController.h"
 
 #import "CarListViewController.h"
@@ -27,6 +30,7 @@
     self = [super init];
     if(self)
     {
+        self.view.tintColor = CURRENT_SYSTEM_COLOR;
         UINavigationItem *navItem = self.navigationItem;
         _selectCar = @"闽A12345";
         navItem.title = _selectCar;
