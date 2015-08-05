@@ -19,7 +19,6 @@
 		249013371B4E0992001D9928 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249013361B4E0992001D9928 /* Images.xcassets */; };
 		249013461B4E0992001D9928 /* MobileCarGuardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 249013451B4E0992001D9928 /* MobileCarGuardTests.m */; };
 		740A56941B5C882500AD78F2 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 740A56931B5C882500AD78F2 /* HeaderView.xib */; };
-		740A56981B5CE80700AD78F2 /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740A56971B5CE80700AD78F2 /* BaiduMapAPI.framework */; };
 		740A569B1B5CEEDF00AD78F2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740A569A1B5CEEDF00AD78F2 /* CoreLocation.framework */; };
 		740A569D1B5CEEE700AD78F2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740A569C1B5CEEE700AD78F2 /* QuartzCore.framework */; };
 		740A569F1B5CEEF000AD78F2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740A569E1B5CEEF000AD78F2 /* OpenGLES.framework */; };
@@ -32,9 +31,9 @@
 		74744EC41B549C61007E4AE7 /* CarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74744EC31B549C61007E4AE7 /* CarDetailViewController.m */; };
 		74744EC71B54A068007E4AE7 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74744EC61B54A068007E4AE7 /* LeftMenuViewController.m */; };
 		747DA82C1B57E45F00878265 /* SlideTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 747DA82B1B57E45F00878265 /* SlideTabBarController.m */; };
+		7486F2CA1B71F0BC005F48CD /* CoreActionSheetPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7486F2C91B71F0BC005F48CD /* CoreActionSheetPicker.framework */; };
+		7486F2CC1B71F0E7005F48CD /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7486F2CB1B71F0E7005F48CD /* BaiduMapAPI.framework */; };
 		74A1273E1B5F70C4005C9E62 /* NSDate+TCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A1273D1B5F70C4005C9E62 /* NSDate+TCUtils.m */; };
-		74A1274A1B5F95E6005C9E62 /* CoreActionSheetPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A127481B5F95DB005C9E62 /* CoreActionSheetPicker.framework */; };
-		74A1274B1B5F95E6005C9E62 /* CoreActionSheetPicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 74A127481B5F95DB005C9E62 /* CoreActionSheetPicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		74AD3F421B5DD95F003E7370 /* MobileCarGuard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74AD3F401B5DD95F003E7370 /* MobileCarGuard.xcdatamodeld */; };
 		74AD3F451B5DDE79003E7370 /* XHCarInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AD3F441B5DDE79003E7370 /* XHCarInfo.m */; };
 		74AD3F481B5DE05F003E7370 /* AllCarStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AD3F471B5DE05F003E7370 /* AllCarStore.m */; };
@@ -68,7 +67,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				74A1274B1B5F95E6005C9E62 /* CoreActionSheetPicker.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,7 +95,6 @@
 		249013441B4E0992001D9928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		249013451B4E0992001D9928 /* MobileCarGuardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileCarGuardTests.m; sourceTree = "<group>"; };
 		740A56931B5C882500AD78F2 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderView.xib; path = ../HeaderView.xib; sourceTree = "<group>"; };
-		740A56971B5CE80700AD78F2 /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI.framework; path = "../../../../../Downloads/百度地图api/BaiduMap_IOSSDK_v2.8.1_Lib/Release-iphoneos/BaiduMapAPI.framework"; sourceTree = SOURCE_ROOT; };
 		740A569A1B5CEEDF00AD78F2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		740A569C1B5CEEE700AD78F2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		740A569E1B5CEEF000AD78F2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -114,9 +111,10 @@
 		74744EC61B54A068007E4AE7 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
 		747DA82A1B57E45F00878265 /* SlideTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTabBarController.h; sourceTree = "<group>"; };
 		747DA82B1B57E45F00878265 /* SlideTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTabBarController.m; sourceTree = "<group>"; };
+		7486F2C91B71F0BC005F48CD /* CoreActionSheetPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreActionSheetPicker.framework; sourceTree = "<group>"; };
+		7486F2CB1B71F0E7005F48CD /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI.framework; sourceTree = "<group>"; };
 		74A1273C1B5F70C4005C9E62 /* NSDate+TCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TCUtils.h"; sourceTree = "<group>"; };
 		74A1273D1B5F70C4005C9E62 /* NSDate+TCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TCUtils.m"; sourceTree = "<group>"; };
-		74A127481B5F95DB005C9E62 /* CoreActionSheetPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreActionSheetPicker.framework; path = "../../../../../Downloads/ActionSheetPicker-3.0-master/CoreActionSheetPicker/Products/CoreActionSheetPicker.framework"; sourceTree = SOURCE_ROOT; };
 		74AD3F411B5DD95F003E7370 /* MobileCarGuard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MobileCarGuard.xcdatamodel; sourceTree = "<group>"; };
 		74AD3F431B5DDE79003E7370 /* XHCarInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCarInfo.h; sourceTree = "<group>"; };
 		74AD3F441B5DDE79003E7370 /* XHCarInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCarInfo.m; sourceTree = "<group>"; };
@@ -146,14 +144,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74A1274A1B5F95E6005C9E62 /* CoreActionSheetPicker.framework in Frameworks */,
 				740A56A51B5CEF1300AD78F2 /* Security.framework in Frameworks */,
+				7486F2CA1B71F0BC005F48CD /* CoreActionSheetPicker.framework in Frameworks */,
 				740A56A31B5CEF0B00AD78F2 /* CoreGraphics.framework in Frameworks */,
 				740A56A11B5CEF0200AD78F2 /* SystemConfiguration.framework in Frameworks */,
 				740A569F1B5CEEF000AD78F2 /* OpenGLES.framework in Frameworks */,
 				740A569D1B5CEEE700AD78F2 /* QuartzCore.framework in Frameworks */,
+				7486F2CC1B71F0E7005F48CD /* BaiduMapAPI.framework in Frameworks */,
 				740A569B1B5CEEDF00AD78F2 /* CoreLocation.framework in Frameworks */,
-				740A56981B5CE80700AD78F2 /* BaiduMapAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,14 +290,14 @@
 		740A56991B5CE83F00AD78F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				74A127481B5F95DB005C9E62 /* CoreActionSheetPicker.framework */,
+				7486F2CB1B71F0E7005F48CD /* BaiduMapAPI.framework */,
+				7486F2C91B71F0BC005F48CD /* CoreActionSheetPicker.framework */,
 				740A56A41B5CEF1300AD78F2 /* Security.framework */,
 				740A56A21B5CEF0B00AD78F2 /* CoreGraphics.framework */,
 				740A56A01B5CEF0200AD78F2 /* SystemConfiguration.framework */,
 				740A569E1B5CEEF000AD78F2 /* OpenGLES.framework */,
 				740A569C1B5CEEE700AD78F2 /* QuartzCore.framework */,
 				740A569A1B5CEEDF00AD78F2 /* CoreLocation.framework */,
-				740A56971B5CE80700AD78F2 /* BaiduMapAPI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -557,6 +555,7 @@
 					"/Users/tyz/Downloads/百度地图api/BaiduMap_IOSSDK_v2.8.1_Lib/Release-iphoneos",
 					"/Users/tyz/Downloads/ActionSheetPicker-3.0-master/CoreActionSheetPicker/Products",
 					"$(PROJECT_DIR)/MobileCarGuard",
+					"$(PROJECT_DIR)",
 				);
 				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = MobileCarGuard/Info.plist;
@@ -575,6 +574,7 @@
 					"/Users/tyz/Downloads/百度地图api/BaiduMap_IOSSDK_v2.8.1_Lib/Release-iphoneos",
 					"/Users/tyz/Downloads/ActionSheetPicker-3.0-master/CoreActionSheetPicker/Products",
 					"$(PROJECT_DIR)/MobileCarGuard",
+					"$(PROJECT_DIR)",
 				);
 				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = MobileCarGuard/Info.plist;
