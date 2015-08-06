@@ -69,15 +69,39 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [_mapView viewWillAppear];
-    _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
-}
 -(void)viewWillDisappear:(BOOL)animated
 {
     [_mapView viewWillDisappear];
     _mapView.delegate = nil; // 不用时，置nil
 }
+
+- (void) viewDidAppear:(BOOL)animated {
+    [_mapView viewWillAppear];
+    _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
+    
+    // 添加一个PointAnnotation
+    BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
+    CLLocationCoordinate2D coor;
+    coor.latitude = 26.107;         //纬度
+    coor.longitude = 119.223;      //经度
+    annotation.coordinate = coor;
+    annotation.title = @"闽A12345";
+    [_mapView addAnnotation:annotation];
+}
+// Override
+- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
+        BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
+        newAnnotationView.pinColor = BMKPinAnnotationColorPurple;
+        newAnnotationView.animatesDrop = YES;// 设置该标注点动画显示
+        return newAnnotationView;
+    }
+    return nil;
+}
+
+//if (annotation != nil) {
+//    [_mapView removeAnnotation:annotation];
+//}
 
 @end

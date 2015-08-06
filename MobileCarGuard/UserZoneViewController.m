@@ -35,10 +35,10 @@
     _mapView.mapType = BMKMapTypeStandard;
     
     CLLocationCoordinate2D coordinate;                  //设定经纬度
-    coordinate.latitude = 39.027283;         //纬度
-    coordinate.longitude = 110.313217;      //经度
+    coordinate.latitude = 26.107283;         //纬度
+    coordinate.longitude = 119.223217;      //经度
     
-    BMKCoordinateRegion viewRegion = BMKCoordinateRegionMake(coordinate, BMKCoordinateSpanMake(1.0, 1.0));
+    BMKCoordinateRegion viewRegion = BMKCoordinateRegionMake(coordinate, BMKCoordinateSpanMake(0.5,0.5));
     BMKCoordinateRegion adjustedRegion = [_mapView regionThatFits:viewRegion];
     
     [_mapView setRegion:adjustedRegion animated:YES];
@@ -47,6 +47,20 @@
     //[_mapView setCompassPosition:CGPointMake(10,50)];
     
     [self.view addSubview:_mapView];
+    
+    // 添加多边形覆盖物
+    CLLocationCoordinate2D coords[4] = {0};
+    coords[0].latitude = 26.107;
+    coords[0].longitude = 119.423;
+    coords[1].latitude = 26.107;
+    coords[1].longitude = 119.203;
+    coords[2].latitude = 26.217;
+    coords[2].longitude = 119.313;
+    coords[3].latitude = 26.217;
+    coords[3].longitude = 119.463;
+    BMKPolygon* polygon = [BMKPolygon polygonWithCoordinates:coords count:4];
+    
+    [_mapView addOverlay:polygon];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,6 +76,19 @@
 {
     [_mapView viewWillDisappear];
     _mapView.delegate = nil; // 不用时，置nil
+}
+
+// Override
+- (BMKOverlayView *)mapView:(BMKMapView *)mapView viewForOverlay:(id <BMKOverlay>)overlay{
+    if ([overlay isKindOfClass:[BMKPolygon class]]){
+        BMKPolygonView* polygonView = [[BMKPolygonView alloc] initWithOverlay:overlay];
+        polygonView.strokeColor = [[UIColor purpleColor] colorWithAlphaComponent:1];
+        polygonView.fillColor = [[UIColor cyanColor] colorWithAlphaComponent:0.2];
+        polygonView.lineWidth = 5.0;
+        
+        return polygonView;
+    }
+    return nil;
 }
 
 @end

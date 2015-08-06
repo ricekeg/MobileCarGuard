@@ -190,10 +190,12 @@ static NSString *ksubSection = @"menuSubSection";
     if(indexPath.row == 0)
     {
         cell.imageView.image = [UIImage imageNamed:[_arrImage objectAtIndex:indexPath.section]];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     else
     {
         cell.imageView.image =nil; //[UIImage imageNamed:@"Nothing"];
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
     }
     
     return cell;

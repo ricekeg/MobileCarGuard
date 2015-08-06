@@ -51,10 +51,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     
-    CGFloat SCREEN_HEIGHT = self.view.frame.size.height;
-    CGFloat SCREEN_WIDTH = self.view.frame.size.width;
-    NSLog(@"%f,%f",SCREEN_HEIGHT,SCREEN_WIDTH);
+    
     // Do any additional setup after loading the view.
     
     self.delegate = self;
