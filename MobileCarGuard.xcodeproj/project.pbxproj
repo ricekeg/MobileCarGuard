@@ -33,7 +33,6 @@
 		74744EC41B549C61007E4AE7 /* CarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74744EC31B549C61007E4AE7 /* CarDetailViewController.m */; };
 		74744EC71B54A068007E4AE7 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74744EC61B54A068007E4AE7 /* LeftMenuViewController.m */; };
 		747DA82C1B57E45F00878265 /* SlideTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 747DA82B1B57E45F00878265 /* SlideTabBarController.m */; };
-		7486F2CA1B71F0BC005F48CD /* CoreActionSheetPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7486F2C91B71F0BC005F48CD /* CoreActionSheetPicker.framework */; };
 		7486F2CC1B71F0E7005F48CD /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7486F2CB1B71F0E7005F48CD /* BaiduMapAPI.framework */; };
 		74A1273E1B5F70C4005C9E62 /* NSDate+TCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A1273D1B5F70C4005C9E62 /* NSDate+TCUtils.m */; };
 		74AD3F421B5DD95F003E7370 /* MobileCarGuard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74AD3F401B5DD95F003E7370 /* MobileCarGuard.xcdatamodeld */; };
@@ -97,6 +96,7 @@
 		2490133F1B4E0992001D9928 /* MobileCarGuardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileCarGuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		249013441B4E0992001D9928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		249013451B4E0992001D9928 /* MobileCarGuardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileCarGuardTests.m; sourceTree = "<group>"; };
+		2490DB001B745143009BDD69 /* Public.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Public.h; sourceTree = "<group>"; };
 		740A56931B5C882500AD78F2 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderView.xib; path = ../HeaderView.xib; sourceTree = "<group>"; };
 		740A569A1B5CEEDF00AD78F2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		740A569C1B5CEEE700AD78F2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -147,14 +147,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7486F2CC1B71F0E7005F48CD /* BaiduMapAPI.framework in Frameworks */,
 				24009A7F1B71FA6800605D6D /* CoreActionSheetPicker.framework in Frameworks */,
 				740A56A51B5CEF1300AD78F2 /* Security.framework in Frameworks */,
-				7486F2CA1B71F0BC005F48CD /* CoreActionSheetPicker.framework in Frameworks */,
 				740A56A31B5CEF0B00AD78F2 /* CoreGraphics.framework in Frameworks */,
 				740A56A11B5CEF0200AD78F2 /* SystemConfiguration.framework in Frameworks */,
 				740A569F1B5CEEF000AD78F2 /* OpenGLES.framework in Frameworks */,
 				740A569D1B5CEEE700AD78F2 /* QuartzCore.framework in Frameworks */,
-				7486F2CC1B71F0E7005F48CD /* BaiduMapAPI.framework in Frameworks */,
 				740A569B1B5CEEDF00AD78F2 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +211,7 @@
 				740A56AA1B5CF6CB00AD78F2 /* AppDelegate.mm */,
 				249013361B4E0992001D9928 /* Images.xcassets */,
 				249013291B4E0991001D9928 /* Supporting Files */,
+				2490DB001B745143009BDD69 /* Public.h */,
 			);
 			path = MobileCarGuard;
 			sourceTree = "<group>";
@@ -556,8 +556,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/tyz/Downloads/百度地图api/BaiduMap_IOSSDK_v2.8.1_Lib/Release-iphoneos",
-					"/Users/tyz/Downloads/ActionSheetPicker-3.0-master/CoreActionSheetPicker/Products",
 					"$(PROJECT_DIR)/MobileCarGuard",
 					"$(PROJECT_DIR)",
 				);
@@ -575,8 +573,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/tyz/Downloads/百度地图api/BaiduMap_IOSSDK_v2.8.1_Lib/Release-iphoneos",
-					"/Users/tyz/Downloads/ActionSheetPicker-3.0-master/CoreActionSheetPicker/Products",
 					"$(PROJECT_DIR)/MobileCarGuard",
 					"$(PROJECT_DIR)",
 				);

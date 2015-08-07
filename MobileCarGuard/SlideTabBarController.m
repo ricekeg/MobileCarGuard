@@ -5,11 +5,8 @@
 //  Created by tyz on 15/7/16.
 //  Copyright (c) 2015年 郑旭. All rights reserved.
 //
-
-
-#define CURRENT_SYSTEM_COLOR [UIColor colorWithRed:52.0/255.0 green:170.0/255.0 blue:220.0/255.0 alpha:1.0]
-
 #import "SlideTabBarController.h"
+#import "Public.h"
 
 #import "CarListViewController.h"
 #import "LeftMenuViewController.h"

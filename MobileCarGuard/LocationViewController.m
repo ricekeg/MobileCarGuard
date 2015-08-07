@@ -7,6 +7,7 @@
 //
 
 #import "LocationViewController.h"
+#import "Public.h"
 
 @interface LocationViewController ()
 
@@ -23,17 +24,12 @@
         self.tabBarItem.title =@"当前位置";
         self.tabBarItem.image =[UIImage imageNamed:@"Location"];
         //self.tabBarItem.badgeValue=@"123";
-
-        
     }
     return  self;
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    CGFloat SCREEN_HEIGHT = [UIScreen mainScreen].bounds.size.height;
-    CGFloat SCREEN_WIDTH = [UIScreen mainScreen].bounds.size.width;
+    [super viewDidLoad]; 
     BMKMapView* mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT)];
     _mapView = mapView;
     //可以缩放
@@ -48,8 +44,8 @@
     _mapView.mapType = BMKMapTypeStandard;
     
     CLLocationCoordinate2D coordinate;                  //设定经纬度
-    coordinate.latitude = 26.107283;         //纬度
-    coordinate.longitude = 119.223217;      //经度
+    coordinate.latitude = LATITUDE_DEFAULT;         //纬度
+    coordinate.longitude = LONGITUDE_DEFAULT;      //经度
     
     BMKCoordinateRegion viewRegion = BMKCoordinateRegionMake(coordinate, BMKCoordinateSpanMake(0.3, 0.3));
     BMKCoordinateRegion adjustedRegion = [_mapView regionThatFits:viewRegion];

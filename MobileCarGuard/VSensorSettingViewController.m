@@ -5,10 +5,8 @@
 //  Created by tyz on 15/7/27.
 //  Copyright (c) 2015年 郑旭. All rights reserved.
 //
-
-#define CURRENT_SYSTEM_COLOR [UIColor colorWithRed:52.0/255.0 green:170.0/255.0 blue:220.0/255.0 alpha:1.0]
-
 #import "VSensorSettingViewController.h" 
+#import "Public.h"
 
 @interface VSensorSettingViewController ()
 
@@ -114,6 +112,9 @@
 }
 
 - (IBAction)timesDefaultTouched:(id)sender {
+    
+    self.timesSlider.value=(int)((UISlider *)sender).value;
+    self.timesLabel.text=[NSString stringWithFormat:@"%d",(int)_timesSlider.value];
 }
 
 @end

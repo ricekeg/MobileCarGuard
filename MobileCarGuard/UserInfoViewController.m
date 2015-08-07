@@ -95,6 +95,7 @@ static NSString *cellIdentifier=@"UITableViewCellIdentifierKey1";
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.font =[UIFont fontWithName:@"Helvetica" size:12.0];
+        
     }
     
     cell.textLabel.text=funcName;

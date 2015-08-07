@@ -7,6 +7,7 @@
 //
 
 #import "LeftMenuViewController.h"
+#import "Public.h"
 #import "CarDetailViewController.h"
 #import "SlideNavigationController.h"
 #import "BatteryViewController.h"
@@ -15,10 +16,6 @@
 #import "AreaAlarmStateViewController.h"
 #import "VSensorSettingViewController.h"
 #import "CarSettingViewController.h"
-
-#define TableCOLOR [UIColor colorWithRed:27.0/255.0 green:30.0/255.0 blue:37.0/255.0 alpha:1.0]
-#define FontCOLOR [UIColor colorWithRed:177.0/255.0 green:174.0/255.0 blue:172.0/255.0 alpha:1.0]
-#define CellCOLOR [UIColor clearColor]//colorWithRed:60.0/255.0 green:55.0/255.0 blue:55.0/255.0 alpha:1.0]
 
 
 static NSString *kheader = @"menuSectionHeader";
@@ -51,8 +48,7 @@ static NSString *ksubSection = @"menuSubSection";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    CGFloat SCREEN_HEIGHT = [UIScreen mainScreen].bounds.size.height;
+     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 140, 310,SCREEN_HEIGHT-189) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -81,9 +77,9 @@ static NSString *ksubSection = @"menuSubSection";
 {
     _arrImage = [NSArray arrayWithObjects:@"Area", @"VSensor",@"Battery",@"CarSetting", nil];
     
-    NSArray *sucSectionsA = [NSArray arrayWithObjects:@"区域报警", @"自定义区域",@"行政区域",@"当前状态", nil];
-    NSArray *sucSectionsB = [NSArray arrayWithObjects:@"震动报警", @"灵敏度设置",@"频率设置", nil];
-    NSArray *sucSectionsC = [NSArray arrayWithObjects:@"终端电量", nil];
+    NSArray *sucSectionsA = @[@"区域报警", @"自定义区域",@"行政区域",@"当前状态"];
+    NSArray *sucSectionsB = @[@"震动报警", @"灵敏度设置",@"频率设置"];
+    NSArray *sucSectionsC = @[@"终端电量"];
 
     NSMutableDictionary *sectionA = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                               @"NO",@"state",
@@ -98,7 +94,7 @@ static NSString *ksubSection = @"menuSubSection";
                               sucSectionsC, ksubSection,
                               nil];
  
-    _sections = [NSArray arrayWithObjects:sectionA,sectionB,sectionC, nil];//,sectionD
+    _sections = @[sectionA,sectionB,sectionC];//,sectionD
     _selectSection = 4;
    
 }

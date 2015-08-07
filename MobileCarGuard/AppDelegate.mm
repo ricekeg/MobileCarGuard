@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Public.h"
 #import "LocationViewController.h"
 #import "TrackViewController.h"
 #import "UserInfoViewController.h"
@@ -14,7 +15,6 @@
 #import "SlideNavigationController.h"
 #import "SlideTabBarController.h"
 
-#define CURRENT_SYSTEM_COLOR [UIColor colorWithRed:52.0/255.0 green:170.0/255.0 blue:220.0/255.0 alpha:1.0]
 
 @interface AppDelegate ()
 

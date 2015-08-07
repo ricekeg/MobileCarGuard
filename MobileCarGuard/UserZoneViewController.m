@@ -7,6 +7,7 @@
 //
 
 #import "UserZoneViewController.h"
+#import "Public.h"
 
 @interface UserZoneViewController ()
 
@@ -18,9 +19,6 @@
     [super viewDidLoad];
     self.navigationItem.title = @"自定义区域";
     
-    
-    CGFloat SCREEN_HEIGHT = [UIScreen mainScreen].bounds.size.height;
-    CGFloat SCREEN_WIDTH = [UIScreen mainScreen].bounds.size.width;
     BMKMapView* mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT)];
     _mapView = mapView;
     //可以缩放
@@ -35,8 +33,8 @@
     _mapView.mapType = BMKMapTypeStandard;
     
     CLLocationCoordinate2D coordinate;                  //设定经纬度
-    coordinate.latitude = 26.107283;         //纬度
-    coordinate.longitude = 119.223217;      //经度
+    coordinate.latitude = LATITUDE_DEFAULT;         //纬度
+    coordinate.longitude = LONGITUDE_DEFAULT;      //经度
     
     BMKCoordinateRegion viewRegion = BMKCoordinateRegionMake(coordinate, BMKCoordinateSpanMake(0.5,0.5));
     BMKCoordinateRegion adjustedRegion = [_mapView regionThatFits:viewRegion];
